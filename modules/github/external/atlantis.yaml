@@ -1,0 +1,11 @@
+version: 3
+projects:
+  - name: s3-demo
+    dir: .
+    autoplan:
+      enabled: true
+      when_modified:
+        - "*.tf"
+        - "atlantis.yaml"
+    apply_requirements:
+      - approved
